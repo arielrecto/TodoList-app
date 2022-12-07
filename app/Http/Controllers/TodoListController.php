@@ -80,16 +80,15 @@ class TodoListController extends Controller
      */
     public function update(Request $request, $id)
     {
-       $data = TodoList::find($id);
+        $data = TodoList::find($id);
 
-       $data->update([
-        'title' => $request->title === null ? $data->title : $request->title,
-        'description' => $request->description === null ? $data->description : $request->description
-       ]);
+        $data->update([
+            'title' => $request->title === null ? $data->title : $request->title,
+            'description' => $request->description === null ? $data->description : $request->description
+        ]);
 
 
-       return back()->with(['message' => 'Data Update Successfully']);
-
+        return back()->with(['message' => 'Updated Successfully']);
     }
 
     /**
@@ -100,13 +99,10 @@ class TodoListController extends Controller
      */
     public function destroy($id)
     {
-        $data = TodoList::find($id);
-
+        $data = Todolist::find($id);
 
         $data->delete();
 
-
-        return back()->with(['message' => 'Todolist Deleted Successfully']);
-
+        return back()->with(['message' => 'Deleted Successfully']);
     }
 }

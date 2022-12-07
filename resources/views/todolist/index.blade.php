@@ -48,7 +48,18 @@
             <td>{{$todo->title}}</td>
             <td>{{$todo->description}}</td>
             <td>
-                <a href="{{route('edit', ['id' => $todo->id])}}"><button class="btn btn-active btn-secondary">Edit</button></a>
+
+              <div class="flex space-x-5">
+                <a href="{{route('edit',['id' => $todo->id])}}">
+                  <button class="btn btn-active btn-secondary">Edit</button>
+                </a>
+
+                <form action="{{route('delete', ['id' => $todo->id])}}" method="post">
+                  @csrf
+                  <button class="btn btn-error">Delete</button>
+                </form>
+              </div>
+               
             </td>
           </tr>
         @empty
