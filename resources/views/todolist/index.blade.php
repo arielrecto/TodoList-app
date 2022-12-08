@@ -48,26 +48,11 @@
             <td>{{$todo->title}}</td>
             <td>{{$todo->description}}</td>
             <td>
-<<<<<<< HEAD
                 <a href="{{route('edit', ['id' => $todo->id])}}"><button class="btn btn-active btn-secondary">Edit</button></a>
 
                 <form action="{{route('delete',['id' => $todo->id])}}" method="post"> 
                   @csrf 
                   <button class="btn btn-primary">Delete</button></form>
-=======
-
-              <div class="flex space-x-5">
-                <a href="{{route('edit',['id' => $todo->id])}}">
-                  <button class="btn btn-active btn-secondary">Edit</button>
-                </a>
-
-                <form action="{{route('delete', ['id' => $todo->id])}}" method="post">
-                  @csrf
-                  <button class="btn btn-error">Delete</button>
-                </form>
-              </div>
-               
->>>>>>> origin/main
             </td>
           </tr>
         @empty
@@ -84,7 +69,6 @@
       </div>
 
     <a href="{{ route('create') }}">Go to Create</a>
-<<<<<<< HEAD
     <section class="text-gray-600 body-font">
       <div class="container px-5 py-24 mx-auto">
         <div class="flex flex-wrap -mx-4 -my-8">
@@ -149,7 +133,4 @@
       </div>
     </section>
     
-=======
-
->>>>>>> origin/main
 </x-layouts.app>
