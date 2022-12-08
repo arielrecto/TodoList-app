@@ -1,13 +1,6 @@
 <x-layouts.app>
 
-    <div class="min-h-screen bg-blue-100 ">
-        @if ($errors->any())
-            {!! implode('', $errors->all('<div>:message</div>')) !!}
-        @endif
 
-        @if (Session::has('message'))
-            <p>{{ Session::get('message') }}</p>
-        @endif
 
         <form action="{{ route('store') }}" method="post">
             <div class="flex justify-center">
