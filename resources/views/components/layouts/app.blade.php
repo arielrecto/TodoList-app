@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Todolist</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <script defer src="{{asset('js/app.js')}}"></script>
 </head>
 <body>
     {{$slot}}
