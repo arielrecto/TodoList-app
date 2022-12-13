@@ -5,7 +5,7 @@
 
     <form action="{{ route('store') }}" method="post">
         <div class="flex justify-center">
-            <div class="flex flex-col lg:w-1/4 space-y-4 mt-20 rounded-lg bg-gray-100 p-5">
+            <div class="flex flex-col lg:w-1/4 space-y-4 mt-20 rounded-lg bg-sky-100 p-5">
 
                 @if ($errors->has('title'))
                     <div class="alert alert-error shadow-lg">
@@ -32,18 +32,19 @@
                     </div>
                 @endif
 
-                <div class="flex justify-center p-2 text-2xl font-bold uppercase">
+                <div class="flex justify-left p-1 text-1xl font-bold uppercase">
                     <label for="">Title</label>
                 </div>
                 <input type="text" name="title" placeholder="Type here"
-                    class="input input-bordered input-accent w-full " <div class="alert alert-error shadow-lg">
-                <div class="flex justify-center p-2 text-2xl font-semibold uppercase">
+                    class="input input-bordered input-accent w-full "
+                    <div class="alert alert-error shadow-lg">
+                <div class="flex justify-left p-1 text-1xl font-bold uppercase">
                     <label for="">description</label>
 
                 </div>
 
                 <input type="text"name="description" placeholder="Type here"
-                    class="input input-bordered input-accent w-full" />
+                    class=" input input-bordered input-accent w-full" />
 
                 <button class="btn btn-success">create</button>
 

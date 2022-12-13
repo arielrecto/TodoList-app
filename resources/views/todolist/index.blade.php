@@ -65,11 +65,11 @@
                         <td>{{ $todo->description }}</td>
                         <td>
                             <a href="{{ route('edit', ['id' => $todo->id]) }}"><button
-                                    class="btn btn-active btn-secondary">Edit</button></a>
+                                    class="btn btn-active btn-sucess">Edit</button></a>
 
                             <form action="{{ route('delete', ['id' => $todo->id]) }}" method="post">
                                 @csrf
-                                <button class="btn btn-primary">Delete</button>
+                                <button class="btn btn-accent">Delete</button>
                             </form>
                         </td>
                     </tr>
@@ -91,7 +91,7 @@
     </div>
 
     <a href="{{ route('create') }}">Go to Create</a>
-    <section class="text-gray-600 body-font">
+    <section class="text-sky-600 body-font">
         <div class="container px-5 py-24 mx-auto">
             <div class="flex flex-wrap -mx-4 -my-8">
                 <div class="py-8 px-4 lg:w-1/3">
